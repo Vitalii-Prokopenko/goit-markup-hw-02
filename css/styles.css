@@ -1,11 +1,33 @@
+/* Main colors
+main color #757575;
+second color #212121;
+hover focus color #2196F3;
+color logo web #2196F3;
+color logo studio #000000;
+color hero & address #FFFFFF;
+main background color #FFFFFF;
+background color our team #F5F4FA;
+background color hero & footer #2F303A;
+background color project card #EEEEEE;
+background color filter button #F5F4FA;
+background color filter button active #2196F3;
+*/
+
+:root {
+  --main-color: #757575;
+  --second-color: #212121;
+  --main-background-color: #ffffff;
+}
+
 body {
   font-family: 'Roboto', 'Raleway', sans-serif;
-  color: #757575;
-  background-color: #f5f5f5;
+  color: var(--main-color);
+  background-color: var(--main-background-color);
   width: 1600px;
 }
 
 /* logo */
+
 .logo {
   font-family: 'Raleway';
   font-style: normal;
@@ -15,73 +37,234 @@ body {
   letter-spacing: 0.03em;
   text-decoration: none;
   color: #2196f3;
-  margin-left: 215px;
-  margin-top: 24px;
-  margin-bottom: 25px;
 }
 
 .colored-part-of-logo-in-header {
   color: #000000;
 }
 
-/* Main menu */
+.colored-part-of-logo-in-footer {
+  color: #ffffff;
+}
+
+/* menu of the website */
+
 .main-menu {
-  display: inline-flex;
-  margin-left: 93px;
-  width: 281px;
-  height: 16px;
-  list-style-type: none;
-}
-
-/* Main menu items */
-.main-menu-item {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;
   letter-spacing: 0.02em;
+  list-style: none;
+}
+
+.main-menu a {
+  text-decoration: none;
+  color: var(--second-color);
+}
+
+/* !!! blue color for the name of current page  */
+
+/* contacts in header */
+
+.contacts-in-header {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.02em;
+  list-style: none;
+}
+
+.contacts-in-header a {
+  text-decoration: none;
+  color: var(--color);
+}
+
+/* hero section*/
+
+.hero {
+  background-color: #2f303a;
+}
+
+.hero h1 {
+  font-style: normal;
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 60px;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #ffffff;
+}
+
+.order-button {
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+}
+
+/* Features section */
+
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
+
+.features {
+  list-style: none;
+}
+
+.feature-headings {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--second-color);
+}
+
+.feature-description {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+}
+
+/* Observed section headings */
+
+.what-do-we-do-heading,
+.our-team-heading {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
+}
+
+/* Our team section */
+.our-team {
+  background-color: #f5f4fa;
+}
+
+.team-member-card {
+  background-color: var(--main-background-color);
+}
+
+.team-member-name {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--second-color);
+}
+
+.team-member-position {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: var(--main-color);
+}
+
+/* Footer */
+
+.footer {
+  background-color: #2f303a;
+}
+
+.studia-address {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: #ffffff;
+}
+
+/* Contacts in footer */
+
+.contacts-in-footer {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
+  list-style: none;
+}
+
+/* !!!! Section portfolio */
+
+.filter-buttons {
+  border-radius: 4px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
   color: #212121;
-  text-decoration: none;
+  list-style: none;
 }
 
-.not-last-item {
-  margin-right: 50px;
-}
-
-.main-menu-item:hover,
-.main-menu-item:focus {
-  color: #2196f3;
-}
-
-/* contacts */
-.contacts {
-  list-style-type: none;
-}
-
-.contact-email {
-  display: inline-flex;
-  flex-direction: row;
-  margin-left: 344px;
-  width: 135px;
-  text-decoration: none;
+.filter-button {
+  background: #f5f4fa;
+  border-radius: 4px;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
-  color: #757575;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+  letter-spacing: 0.03em;
+  color: #212121;
 }
 
-.contact-phone {
-  display: inline-flex;  
-  flex-direction: row;
-  margin-left: 344px;
-  width: 135px;
-  text-decoration: none;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 16px;
-  letter-spacing: 0.02em;
-  color: #757575;
+/* Portfolio cards */
+
+.portfolio-cards {
+  list-style: none;
+}
+
+.portfolio-card-heading {
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 36px;
+letter-spacing: 0.06em;
+color: var(--second-color);
+}
+
+.portfolio-card-project-type {
+font-style: normal;
+font-weight: 400;
+font-size: 16px;
+line-height: 30px;
+letter-spacing: 0.03em;
+color: var(--main-color);
 }
