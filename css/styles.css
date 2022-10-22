@@ -17,23 +17,25 @@ background color filter button active #2196F3;
   --main-color: #757575;
   --second-color: #212121;
   --main-background-color: #ffffff;
+  --color-anchor-hover-focus: #2196f3;
+  --color-button-hover-focus: #ffffff;
+  --background-color-button-hover-focus: #2196f3;
 }
 
 body {
+  width: 1600px;
   font-family: 'Roboto', 'Raleway', sans-serif;
   color: var(--main-color);
   background-color: var(--main-background-color);
-  width: 1600px;
-}
+  }
 
 /* logo */
 
 .logo {
   font-family: 'Raleway';
   font-style: normal;
-  font-weight: 700;
   font-size: 26px;
-  line-height: 31px;
+  line-height: 1.19;
   letter-spacing: 0.03em;
   text-decoration: none;
   color: #2196f3;
@@ -53,7 +55,7 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   list-style: none;
 }
@@ -61,6 +63,11 @@ body {
 .main-menu a {
   text-decoration: none;
   color: var(--second-color);
+}
+
+.main-menu a:hover,
+.main-menu a:focus {
+  color: var(--color-anchor-hover-focus);
 }
 
 /* !!! blue color for the name of current page  */
@@ -71,14 +78,19 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.02em;
   list-style: none;
 }
 
 .contacts-in-header a {
   text-decoration: none;
-  color: var(--color);
+  color: var(--main-color);
+}
+
+.contacts-in-header a:hover,
+.contacts-in-header a:focus {
+  color: var(--color-anchor-hover-focus);
 }
 
 /* hero section*/
@@ -91,7 +103,7 @@ body {
   font-style: normal;
   font-weight: 900;
   font-size: 44px;
-  line-height: 60px;
+  line-height: 1.36;
   text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -99,18 +111,18 @@ body {
 }
 
 .order-button {
-  background-color: #2196f3;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
+  font-family: inherit;
   font-style: normal;
-  font-weight: 700;
   font-size: 16px;
-  line-height: 30px;
-  display: flex;
+  line-height: 1.875;
+  cursor: pointer;
   align-items: center;
   text-align: center;
   letter-spacing: 0.06em;
   color: #ffffff;
+  background-color: #2196f3;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 /* Features section */
@@ -134,19 +146,16 @@ body {
 
 .feature-headings {
   font-style: normal;
-  font-weight: 700;
   font-size: 14px;
-  line-height: 16px;
+  line-height: 1.14;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--second-color);
 }
 
 .feature-description {
-  font-style: normal;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   letter-spacing: 0.03em;
 }
 
@@ -155,9 +164,8 @@ body {
 .what-do-we-do-heading,
 .our-team-heading {
   font-style: normal;
-  font-weight: 700;
   font-size: 36px;
-  line-height: 42px;
+  line-height: 1.17;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-color);
@@ -176,17 +184,15 @@ body {
   font-style: normal;
   font-weight: 500;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.1875;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--second-color);
 }
 
 .team-member-position {
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
-  line-height: 19px;
+  line-height: 1.1875;
   text-align: center;
   letter-spacing: 0.03em;
   color: var(--main-color);
@@ -199,10 +205,9 @@ body {
 }
 
 .studia-address {
-  font-style: normal;
-  font-weight: 400;
   font-size: 14px;
-  line-height: 24px;
+  font-style: normal;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   color: #ffffff;
 }
@@ -210,13 +215,16 @@ body {
 /* Contacts in footer */
 
 .contacts-in-footer {
-  font-style: normal;
-  font-weight: 400;
+  list-style: none;
   font-size: 14px;
-  line-height: 24px;
+  line-height: 1.71;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
-  list-style: none;
+  }
+
+.contacts-in-footer p:hover,
+.contacts-in-footer p:focus {
+  color: var(--color-anchor-hover-focus);
 }
 
 /* !!!! Section portfolio */
@@ -226,28 +234,29 @@ body {
 }
 
 .filter-button {
-  font-style: normal;
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 30px;
-  align-items: center;
-  text-align: center;
-  letter-spacing: 0.06em;
-  border: none;
-  border-radius: 4px;
-  background-color: #f5f4fa;
-  color: var(--second-color);
   padding-left: 22px;
   padding-right: 22px;
   padding-top: 6px;
   padding-bottom: 6px;
-}
+  font-family: inherit;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 1.875;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  color: var(--second-color);
+  background-color: #f5f4fa;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  }
 
 .filter-button:hover,
 .filter-button:focus {
-background-color: #2196F3;
-color: var(--main-background-color);
-}
+  color: var(--color-button-hover-focus);
+  background-color: var(--background-color-button-hover-focus);
+  }
 
 /* Portfolio cards */
 
@@ -257,18 +266,15 @@ color: var(--main-background-color);
 
 .portfolio-card-heading {
   font-style: normal;
-  font-weight: 700;
   font-size: 18px;
-  line-height: 36px;
+  line-height: 2;
   letter-spacing: 0.06em;
   color: var(--second-color);
 }
 
 .portfolio-card-project-type {
-  font-style: normal;
-  font-weight: 400;
   font-size: 16px;
-  line-height: 30px;
+  line-height: 1.875;
   letter-spacing: 0.03em;
   color: var(--main-color);
 }
